@@ -1,0 +1,54 @@
+                                               github注册及使用
+
+ 一 注册
+
+      1.github 的官方网址  www.github.com
+
+      2.准备两个邮箱；
+    
+          网易邮箱1: github666@163.com;
+          网易邮箱2：github777@163.com;
+
+
+      4.邮箱验证：
+           点击左上角的图标；找到settings并点击；进去页面在左边点击
+           Emails;并添加你的邮箱地址；点击后面send(发送)去验证；然后去网易邮箱中关注就可以了。
+
+      5.生成秘钥；
+          点击Emails下面的SSH and.... 然后点击左上角的new SSH key；
+  
+      6.在本地生成一个秘钥；
+          在命令窗口输入ssh-keygen -t rsa -C"github666@163.com"
+          直接一直回车生成秘钥，如果出错可输入clear从新输入，
+          在这里可以找到秘钥  C盘-->用户--> dell-->.ssh
+          打开.ssh点第二个用记事本打开并复制，然后粘贴到key方框中；
+          然后点击 add ssh key就好了。
+
+      7.检查一下配置的(账号和密码)信息是否一样？
+          输入git config -l;如果信息不对或是以前注册的；就从新输入
+          git config --global user.email "邮箱号"；然后回车；之后再输入
+          git config --global user.name  "用户名"；然后回车；完成之后再
+          输入上面的那一步；
+
+ 二 上传
+      
+         1. 本地代码放到github里面；第一次和github建立关系；
+            首先新建一个项目；点击右上角的＋号，点击New repository；
+            然后填写项目名称和项目描述；选择public(默认就是)和最下面那个Initi......；
+            点击最后的按钮 Create repository就完成了；然后点击clone or download这个按钮；
+            点击一个类似这样的https://github.com/yangzibo/github-.git的项目地址的复制按钮；
+ 
+         2. 在电脑上打开命令输入，输入git clone （地址）然后回车；然后电脑上就会出现项目名称
+            的一个文件夹，打开文件夹，把要上传上去的东西复制进去；然后开始输入命令继续上传；
+                          git status     看一下东西是否放进去了
+                          git add .      添加所有东西
+                          git commit -m ''
+                          git push
+                          输入用户名和密码就上传成功了；
+
+
+三 删除无用的项目内容
+         1. 在复制项目地址的那一页横着的列表中找到settings,然后点击往最下面找到Danger Zone这一
+            框，点击第三个按钮(delete this repository)这个按钮；输入要删除项目的名称点击回车就
+            好；
+            
